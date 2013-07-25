@@ -1,7 +1,7 @@
 # Run first... Set-ExecutionPolicy Unrestricted
-
+$path = $(get-location)
 $xl=New-Object -ComObject Excel.Application
-$wb=$xl.WorkBooks.Open('file.xlsx')
+$wb=$xl.WorkBooks.Open("$path\file.xlsx")
 $ws=$wb.WorkSheets.item(1)
 $xl.Visible=$false
 
@@ -10,4 +10,3 @@ $ws.Cells.Item(1,1)=$timestamp
 
 $wb.Save()
 $xl.Quit()
-
