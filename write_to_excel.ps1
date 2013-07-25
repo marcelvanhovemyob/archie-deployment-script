@@ -1,8 +1,8 @@
 # Run first... Set-ExecutionPolicy Unrestricted
 #$path = $(get-location)
-$path = "c:\temp"
+$path = "c:/temp"
 $xl=New-Object -ComObject Excel.Application
-$wb=$xl.WorkBooks.Open("$path\file.xlsx")
+$wb=$xl.WorkBooks.Open("$path/file.xlsx")
 $ws=$wb.WorkSheets.item(1)
 $xl.Visible=$false
 
