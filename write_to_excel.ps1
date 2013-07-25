@@ -8,5 +8,5 @@ $xl.Visible=$false
 $timestamp = (get-date -format "HH:mm:ss")
 $ws.Cells.Item(1,1)=$timestamp
 
-$wb.Save()
+$wb.SaveAs("$path\file2.xlsx")
 $xl.Quit()
