@@ -1,6 +1,5 @@
 # Run first... Set-ExecutionPolicy Unrestricted
-#$path = $(get-location)
-$path = "c:/temp"
+$path = $(get-location)
 $xl=New-Object -ComObject Excel.Application
 $wb=$xl.WorkBooks.Open("$path/file.xlsx")
 $ws=$wb.WorkSheets.item(1)
